@@ -6,10 +6,11 @@ JavaScript. No framework, no build step. Netlify deploys it as-is.
 ## What's here
 
 ```
-index.html    The page: nav, hero, about, what I speak on, praise, contact
-styles.css    All styling (brand colors + type)
-script.js     Mobile menu + Netlify-friendly contact form submit
-assets/       Drop alexa.jpg here to replace the hero monogram
+index.html              The page: nav, hero, about, what I speak on, praise, contact
+styles.css              All styling (brand colors + type)
+script.js               Mobile menu + Netlify-friendly contact form submit
+assets/alexa-hero.jpg   Hero portrait (web-optimized)
+assets/alexa-speaking.jpg  Keynote photo in the About section (web-optimized)
 ```
 
 ## Brand
@@ -39,7 +40,10 @@ notification in Netlify under **Forms → Form notifications**.
 Locally (opening `index.html` in a browser with no Netlify backend), the form
 shows a friendly fallback message pointing to the email address.
 
-## Swap in a real photo
+## Photos
 
-Add a portrait at `assets/alexa.jpg`, then in `styles.css` find `.hero__photo`
-and uncomment the two `background-image` lines. The monogram is replaced.
+The hero and About photos live in `assets/` as web-optimized JPEGs (resized
+from the event originals, roughly 110 to 160 KB each). To swap either one,
+drop a replacement at the same path and keep the filename. The hero image is
+framed with `object-position` in `styles.css` (`.hero__img`); nudge that value
+if a new photo needs recentering.

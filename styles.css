@@ -160,15 +160,15 @@ a:hover { color: var(--pink); }
   border-radius: 24px;
   background: linear-gradient(150deg, var(--navy) 0%, var(--navy-800) 45%, var(--teal-dark) 100%);
   box-shadow: var(--shadow-md);
-  display: grid; place-items: center;
   overflow: hidden;
   border: 6px solid #fff;
-  /* Swap in a real photo: uncomment and drop assets/alexa.jpg
-     background-image: url("assets/alexa.jpg"); background-size: cover; background-position: center; */
 }
-.hero__monogram {
-  font-family: var(--font-display); font-weight: 800; font-size: 5.5rem;
-  color: rgba(255, 255, 255, 0.9); letter-spacing: 0.04em;
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 18%;
+  display: block;
 }
 .hero__badge {
   position: absolute; left: -14px; bottom: 26px;
@@ -200,6 +200,13 @@ a:hover { color: var(--pink); }
   font-family: var(--font-display); font-weight: 500; color: var(--navy);
   font-size: 1.16rem !important; line-height: 1.5;
   border-left: 4px solid var(--teal); padding-left: 22px; margin-top: 26px !important;
+}
+.about__figure { margin: 26px 0 0; }
+.about__figure img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 5px solid #fff;
 }
 
 /* ---------- Topics ---------- */
